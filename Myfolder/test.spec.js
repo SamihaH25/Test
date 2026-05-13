@@ -17,3 +17,9 @@ test("should have a link to more information", async ({ page }) => {
   const link = await page.locator("a").getAttribute("href");
   expect(link).toBe("https://www.iana.org/domains/example");
 });
+
+test("a link to more information", async ({ page }) => {
+  await page.goto("https://example.com");
+  const link = await page.locator("a").getAttribute("href");
+  expect(link).toBe("https://www.iana.org/domains/example");
+});
